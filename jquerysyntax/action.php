@@ -34,6 +34,13 @@ class action_plugin_jquerysyntax extends DokuWiki_Action_Plugin {
 			'src'     => $plugin_root.'/jquery-1.4.1.min.js'
 			);
 
+		$syntax_root = $plugin_root.'/jquery-syntax/';
+		$event->data['script'][] = array(
+			'type'    => 'text/javascript',
+			'charset' => 'utf-8',
+			'_data'   => "jQuery.noConflict(); jQuery(document).ready(function($) { Syntax.root = \"".$syntax_root."\"; $.syntax({layout: 'table', replace: true}) });"
+			);
+
 		$event->data['script'][] = array(
 			'type'    => 'text/javascript',
 			'charset' => 'utf-8',
@@ -48,11 +55,8 @@ class action_plugin_jquerysyntax extends DokuWiki_Action_Plugin {
 			'src'     => $plugin_root.'/jquery-syntax/jquery.syntax.cache.js'
 			);
 		
-		$syntax_root = $plugin_root.'/jquery-syntax/';
-		$event->data['script'][] = array(
-			'type'    => 'text/javascript',
-			'charset' => 'utf-8',
-			'_data'   => "$(function() { Syntax.root = \"" . $syntax_root . "\"; $.syntax({layout: 'table', replace: true}); });",
-			);
+
+			
+			
 	}
 }
