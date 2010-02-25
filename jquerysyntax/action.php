@@ -25,7 +25,7 @@ class action_plugin_jquerysyntax extends DokuWiki_Action_Plugin {
 	}
 
 	function _inject_js(&$event, $param) {
-		$plugin_root = "/lib/plugins/jquerysyntax";
+		$plugin_root = DOKU_BASE."lib/plugins/jquerysyntax";
 		
 		$event->data['script'][] = array(
 			'type'    => 'text/javascript',
@@ -54,9 +54,5 @@ class action_plugin_jquerysyntax extends DokuWiki_Action_Plugin {
 			'_data'   => '',
 			'src'     => $plugin_root.'/jquery-syntax/jquery.syntax.cache.js'
 			);
-		
-
-			
-			
 	}
 }
