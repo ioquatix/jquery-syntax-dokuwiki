@@ -10,7 +10,7 @@ require 'stringio'
 require 'fileutils'
 require 'set'
 
-PLUGIN_ZIP = "jquerysyntax.zip"
+PLUGIN_ZIP = "jquery-syntax-dokuwiki.zip"
 
 task :build_plugin do
 	Dir.chdir(File.dirname(__FILE__)) do

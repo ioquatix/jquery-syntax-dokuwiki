@@ -13,8 +13,8 @@ class action_plugin_jquerysyntax extends DokuWiki_Action_Plugin {
 		return array(
 			'author' => 'Samuel Williams',
 			'email'  => 'samuel.williams@oriontransfer.co.nz',
-			'date'   => '2010-02-17',
-			'name'   => 'jQuery.Syntax',
+			'date'   => '2010-04-09',
+			'name'   => 'jQuery.Syntax release-1.5',
 			'desc'   => 'Extreme Client-side Syntax Highlighting. Inserts required JavaScript code.',
 			'url'    => 'http://www.oriontransfer.co.nz/software/jquery-syntax',
 		);
