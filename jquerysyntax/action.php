@@ -13,8 +13,8 @@ class action_plugin_jquerysyntax extends DokuWiki_Action_Plugin {
 		return array(
 			'author' => 'Samuel Williams',
 			'email'  => 'samuel.williams@oriontransfer.co.nz',
-			'date'   => '2010-04-09',
-			'name'   => 'jQuery.Syntax release-1.5',
+			'date'   => '2010-04-23',
+			'name'   => 'jQuery.Syntax release-1.9',
 			'desc'   => 'Extreme Client-side Syntax Highlighting. Inserts required JavaScript code.',
 			'url'    => 'http://www.oriontransfer.co.nz/software/jquery-syntax',
 		);
@@ -38,7 +38,7 @@ class action_plugin_jquerysyntax extends DokuWiki_Action_Plugin {
 		$event->data['script'][] = array(
 			'type'    => 'text/javascript',
 			'charset' => 'utf-8',
-			'_data'   => "jQuery.noConflict(); jQuery(document).ready(function($) { Syntax.root = \"".$syntax_root."\"; $.syntax({layout: 'table', replace: true}) });"
+			'_data'   => "jQuery.noConflict(); jQuery(document).ready(function($) { $.syntax({root: \"".$syntax_root."\" }) });"
 			);
 
 		$event->data['script'][] = array(

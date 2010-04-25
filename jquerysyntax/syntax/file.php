@@ -28,29 +28,4 @@ class syntax_plugin_jquerysyntax_file extends syntax_plugin_jquerysyntax_code {
 	function postConnect() {
 		$this->Lexer->addExitPattern('</file>', 'plugin_jquerysyntax_file');
 	}
-
-	function handle($match, $state, $pos, &$handler) {
-		switch ($state) {
-			case DOKU_LEXER_ENTER:
-			$this->syntax = substr($match, 1);
-			return false;
-
-			case DOKU_LEXER_UNMATCHED:
-			// will include everything from <file ... to ... </file >
-			// e.g. ... [lang] [|title] > [content]
-			list($attr, $content) = preg_split('/>/u',$match,2);
-			list($lang, $title) = preg_split('/\|/u',$attr,2);
-
-			if ($this->syntax == 'code') {
-				$lang = trim($lang);
-				if ($lang == 'html') $lang = 'html4strict';
-				if (!$lang) $lang = NULL;
-			} else {
-				$lang = NULL;
-			}
-
-			return array($this->syntax, $lang, trim($title), $content);
-		}      
-		return false;
-	}
 }
