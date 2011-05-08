@@ -1,0 +1,11 @@
+ol.syntax {
+	font-weight: normal !important;
+}
+
+.syntax-container .toolbar {
+	text-align: right !important;
+}
+
+.syntax-container pre {
+	font-size: inherit !important;
+}

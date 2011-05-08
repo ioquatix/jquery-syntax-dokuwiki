@@ -1,8 +1,8 @@
 <?php
 
-//	This file is part of the "jQuery.Syntax" project, and is licensed under the GNU AGPLv3.
-//	Copyright 2010 Samuel Williams. All rights reserved.
+//	This file is part of the "jQuery.Syntax" project, and is distributed under the MIT License.
 //	See <jquery.syntax.js> for licensing details.
+//	Copyright (c) 2011 Samuel G. D. Williams. <http://www.oriontransfer.co.nz>
 
 if(!defined('DOKU_INC')) die();
 if(!defined('DOKU_PLUGIN')) define('DOKU_PLUGIN',DOKU_INC.'lib/plugins/');
@@ -14,7 +14,7 @@ class syntax_plugin_jquerysyntax_file extends syntax_plugin_jquerysyntax_code {
 		return array(
 			'author' => 'Samuel Williams',
 			'email'  => 'samuel.williams@oriontransfer.co.nz',
-			'date'   => '2010-06-12',
+			'date'   => '2011-05-08',
 			'name'   => 'jQuery.Syntax',
 			'desc'   => "Extreme Client-side Syntax Highlighting. Replaces DokuWiki's <file> handler.",
 			'url'    => 'http://www.oriontransfer.co.nz/software/jquery-syntax',

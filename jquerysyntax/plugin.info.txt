@@ -1,0 +1,7 @@
+base   jquerysyntax
+author Samuel Williams
+email  samuel@oriontransfer.co.nz
+date   2011-05-08
+name   Example Plugin to do Stuff
+desc   Fast and powerful syntax highlighting.
+url    http://www.oriontransfer.co.nz/software/jquery-syntax

@@ -1,8 +1,8 @@
 <?php
 
-//	This file is part of the "jQuery.Syntax" project, and is licensed under the GNU AGPLv3.
-//	Copyright 2010 Samuel Williams. All rights reserved.
+//	This file is part of the "jQuery.Syntax" project, and is distributed under the MIT License.
 //	See <jquery.syntax.js> for licensing details.
+//	Copyright (c) 2011 Samuel G. D. Williams. <http://www.oriontransfer.co.nz>
 
 if(!defined('DOKU_INC')) die();
 if(!defined('DOKU_PLUGIN')) define('DOKU_PLUGIN',DOKU_INC.'lib/plugins/');
@@ -13,8 +13,8 @@ class action_plugin_jquerysyntax extends DokuWiki_Action_Plugin {
 		return array(
 			'author' => 'Samuel Williams',
 			'email'  => 'samuel.williams@oriontransfer.co.nz',
-			'date'   => '2010-06-14',
-			'name'   => 'jQuery.Syntax release-2.2.2',
+			'date'   => '2011-05-08',
+			'name'   => 'jQuery.Syntax release-3.0',
 			'desc'   => 'Extreme Client-side Syntax Highlighting. Inserts required JavaScript code.',
 			'url'    => 'http://www.oriontransfer.co.nz/software/jquery-syntax',
 		);
@@ -31,28 +31,29 @@ class action_plugin_jquerysyntax extends DokuWiki_Action_Plugin {
 			'type'    => 'text/javascript',
 			'charset' => 'utf-8',
 			'_data'   => '',
-			'src'     => $plugin_root.'/jquery-1.4.1.min.js'
+			'src'     => $plugin_root.'/jquery-1.6.min.js'
 			);
 
 		$syntax_root = $plugin_root.'/jquery-syntax/';
 		$event->data['script'][] = array(
 			'type'    => 'text/javascript',
 			'charset' => 'utf-8',
-			'_data'   => "jQuery.noConflict(); jQuery(document).ready(function($) { $.syntax({root: \"".$syntax_root."\" }) });"
+			'_data'   => "jQuery.noConflict(); jQuery(document).ready(function($) { $.syntax() });"
 			);
 
 		$event->data['script'][] = array(
 			'type'    => 'text/javascript',
 			'charset' => 'utf-8',
 			'_data'   => '',
-			'src'     => $plugin_root.'/jquery-syntax/jquery.syntax.js'
+			'src'     => $plugin_root.'/jquery-syntax/jquery.syntax.min.js'
 			);
-
-		$event->data['script'][] = array(
-			'type'    => 'text/javascript',
+			
+		$event->data['link'][] = array(
+			'type'    => 'text/css',
 			'charset' => 'utf-8',
-			'_data'   => '',
-			'src'     => $plugin_root.'/jquery-syntax/jquery.syntax.cache.js'
+			'rel'     => 'stylesheet',
+			'media'   => 'screen',
+			'href'     => $plugin_root.'/dw-fixes.css'
 			);
 	}
 }
