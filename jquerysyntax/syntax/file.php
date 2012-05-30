@@ -14,7 +14,7 @@ class syntax_plugin_jquerysyntax_file extends syntax_plugin_jquerysyntax_code {
 		return array(
 			'author' => 'Samuel Williams',
 			'email'  => 'samuel.williams@oriontransfer.co.nz',
-			'date'   => '2011-05-08',
+			'date'   => '2012-06-01',
 			'name'   => 'jQuery.Syntax',
 			'desc'   => "Extreme Client-side Syntax Highlighting. Replaces DokuWiki's <file> handler.",
 			'url'    => 'http://www.oriontransfer.co.nz/software/jquery-syntax',

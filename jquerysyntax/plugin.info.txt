@@ -1,7 +1,7 @@
 base   jquerysyntax
 author Samuel Williams
 email  samuel@oriontransfer.co.nz
-date   2011-05-08
-name   Example Plugin to do Stuff
-desc   Fast and powerful syntax highlighting.
+date   2012-06-01
+name   jQuery.Syntax for DokuWiki
+desc   Fast and lightweight syntax highlighting.
 url    http://www.oriontransfer.co.nz/software/jquery-syntax
