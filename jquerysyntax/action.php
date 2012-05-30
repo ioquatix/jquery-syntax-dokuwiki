@@ -26,14 +26,17 @@ class action_plugin_jquerysyntax extends DokuWiki_Action_Plugin {
 
 	function _inject_js(&$event, $param) {
 		$plugin_root = DOKU_BASE."lib/plugins/jquerysyntax";
+		global $updateVersion;
 		
-		$event->data['script'][] = array(
-			'type'    => 'text/javascript',
-			'charset' => 'utf-8',
-			'_data'   => '',
-			'src'     => $plugin_root.'/jquery-1.6.min.js'
-			);
-
+		if ($updateVersion < 36.0) {
+			$event->data['script'][] = array(
+				'type'    => 'text/javascript',
+				'charset' => 'utf-8',
+				'_data'   => '',
+				'src'     => $plugin_root.'/jquery-1.6.min.js'
+				);
+		}
+		
 		$syntax_root = $plugin_root.'/jquery-syntax/';
 		$event->data['script'][] = array(
 			'type'    => 'text/javascript',
