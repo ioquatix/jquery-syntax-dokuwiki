@@ -58,15 +58,7 @@ class syntax_plugin_jquerysyntax_code extends DokuWiki_Syntax_Plugin {
 			list($attr, $content) = preg_split('/>/u',$match,2);
 			list($lang, $title) = preg_split('/\|/u',$attr,2);
 
-			if ($this->syntax == 'code') {
-				$lang = trim($lang);
-				if ($lang == 'html') $lang = 'html4strict';
-				if (!$lang) $lang = NULL;
-			} else {
-				$lang = NULL;
-			}
-
-			return array($this->syntax, $lang, trim($title), $content);
+			return array($this->syntax, trim($lang), trim($title), $content);
 		}       
 		return false;
 	}
